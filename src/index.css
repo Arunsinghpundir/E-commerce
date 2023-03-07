@@ -29,6 +29,8 @@ nav {
   border-radius: 8px;
   margin: 10px;
   padding: 15px;
+  height: 350px;
+  width: 80%;
   box-shadow: 0 0 15px inset;
 }
 img {
@@ -49,11 +51,9 @@ img:hover {
   grid-template-columns: 1fr 1fr 1fr;
 }
 input {
-  width: 600px;
-  height: 30px;
+  width: 500px;
+  height: 15px;
   border-radius: 6px;
-  margin: 10px;
-  padding: 10px;
 }
 .des {
   display: flex;
@@ -64,15 +64,19 @@ input {
   position: fixed;
   top: 55%;
   right: 20px;
-  border-radius: 6px;
+  font-size: 0.8rem;
+  border-radius: 9px;
   height: 40vh;
-  width: 200px;
+  width: 230px;
   background-color: rgba(255, 245, 45, 0.8);
   padding: 10px;
+  box-shadow: 0 0 25px inset;
 }
-li {
-  list-style: none;
+.des h2 {
+  margin: 15px;
+  color: rgba(26, 1, 59, 0.97);
 }
+
 .load {
   text-align: center;
 }
@@ -81,12 +85,14 @@ li {
   position: fixed;
   top: 10%;
   right: 20px;
-  border-radius: 6px;
+  border-radius: 9px;
   height: 40vh;
-  width: 200px;
+  width: 230px;
   background-color: rgba(255, 245, 45, 0.8);
   padding: 10px;
   overflow-y: auto;
+  box-shadow: 0 0 25px inset;
+  z-index: 999;
 }
 .list {
   display: flex;
@@ -96,12 +102,12 @@ li {
   margin: 10px 0;
 }
 .list h4 {
-  font-size: 12px;
+  font-size: 0.8rem;
   margin: 5px;
   text-align: left;
 }
 .cart h3 {
-  font-size: 15px;
+  font-size: 1rem;
   margin: 10px;
 }
 .btn {
@@ -115,4 +121,53 @@ li {
 }
 .btn:hover {
   scale: 0.9;
+}
+.nav-btn {
+  width: 110px;
+  font-size: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.nav-btn:active {
+  box-shadow: 0 0 10px inset;
+  border-radius: 6px;
+  scale: 0.9;
+}
+@media (max-width: 768px) {
+  .main {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  nav h1 {
+    font-size: 1rem;
+  }
+  input {
+    width: 170px;
+  }
+  .des {
+    display: none;
+  }
+  .cart {
+    display: none;
+    top: 8%;
+    height: 50vh;
+    background-color: rgba(255, 245, 45, 0.9);
+    font-size: 1.2rem;
+  }
+  .cart h4 {
+    font-size: 1rem;
+  }
+  .nav-btn {
+    display: block;
+  }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  .main {
+    width: 35%;
+    grid-template-columns: 1fr 1fr;
+  }
 }

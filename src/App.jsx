@@ -11,6 +11,8 @@ export default function App() {
   }
   const { data, loading } = useFetch(url);
   const [cart,setCart] = useState([]);
+  //tap to view cart
+  const [view,setView] = useState("none")
   //add to cart
   function addtoCart(item){
     if(!cart.includes(item)){
@@ -21,7 +23,7 @@ export default function App() {
   }
   //remove from cart
   const removeFromCart = (item)=>{
-    const newCart = cart.filter((cart)=>cart.id !== item);
+    const newCart = cart.filter((cart)=>cart.title !== item);
     setCart(newCart);
   };
   
@@ -32,17 +34,18 @@ export default function App() {
     <div className="App">
       <nav>
         <h1>E-Commerce</h1>
-      </nav>
-      <div className="container">
-        {" "}
         <input
           type="text"
           value={input}
           onChange={(i) => setInput(i.target.value)}
           placeholder="Search here..."
         />
+        <p className="nav-btn" onClick={()=>setView(view==="block"?"none":"block")}>Cart {cart.length} <strong>&#9776;</strong></p>
+      </nav>
+      <div className="container">
+       
       </div>
-      <Cart cart={cart} removeFromCart={removeFromCart} />
+      <Cart display={view} cart={cart} removeFromCart={removeFromCart} />
       <div className="main">
         {data.products.map((i, index) => {
           return (
