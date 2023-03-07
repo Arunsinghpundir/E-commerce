@@ -1,4 +1,4 @@
-import "./Index.css";
+import "./index.css";
 import { useState } from "react";
 import useFetch from "./useFetch";
 import Detail from "./Detail";
