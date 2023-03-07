@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  background-color: wheat;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 99;
+}
+.container {
+  margin-top: 80px;
+}
+.product-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 0 0 15px inset;
+}
+img {
+  margin: 10px;
+  height: 200px;
+  width: 250px;
+  border-radius: 6px;
+  transition: 1s;
+}
+img:hover {
+  scale: 1.05;
+  box-shadow: 0 0 15px 2px black;
+}
+.main {
+  width: 80%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+input {
+  width: 600px;
+  height: 30px;
+  border-radius: 6px;
+  margin: 10px;
+  padding: 10px;
+}
+.des {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  flex-direction: column;
+  position: fixed;
+  top: 55%;
+  right: 20px;
+  border-radius: 6px;
+  height: 40vh;
+  width: 200px;
+  background-color: rgba(255, 245, 45, 0.8);
+  padding: 10px;
+}
+li {
+  list-style: none;
+}
+.load {
+  text-align: center;
+}
+.cart {
+  width: 20%;
+  position: fixed;
+  top: 10%;
+  right: 20px;
+  border-radius: 6px;
+  height: 40vh;
+  width: 200px;
+  background-color: rgba(255, 245, 45, 0.8);
+  padding: 10px;
+  overflow-y: auto;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px 0;
+}
+.list h4 {
+  font-size: 12px;
+  margin: 5px;
+  text-align: left;
+}
+.cart h3 {
+  font-size: 15px;
+  margin: 10px;
+}
+.btn {
+  background-color: rgba(1, 7, 8, 0.87);
+  color: white;
+  border: none;
+  height: 30px;
+  border-radius: 6px;
+  margin: 10px;
+  transition: 0.4s;
+}
+.btn:hover {
+  scale: 0.9;
+}
